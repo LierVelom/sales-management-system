@@ -1,0 +1,51 @@
+services:
+  api-gateway:
+    build:
+      context: ./api-gateway
+    ports:
+      - "3000:3000"
+    depends_on:
+      - product-service
+      - order-service
+      - customer-service
+
+  product-service:
+    build:
+      context: ./product-service
+    ports:
+      - "3001:3000" # Fixed port mapping
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/productdb
+    depends_on:
+      - mongo
+
+  order-service:
+    build:
+      context: ./order-service
+    ports:
+      - "3002:3000"
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/orderdb
+    depends_on:
+      - mongo
+
+  customer-service:
+    build:
+      context: ./customer-service
+    ports:
+      - "3003:3000"
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/customerdb
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
