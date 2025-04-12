@@ -10,6 +10,7 @@ The Order Service is a microservice responsible for managing orders in the Sales
 
 ## API Endpoints
 
+- `GET /orders`: Retrieve a list of all orders.
 - `POST /orders`: Create a new order.
 - `GET /orders/{id}`: Retrieve details of an order by ID.
 - `DELETE /orders/{id}`: Cancel an order by ID.

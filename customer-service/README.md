@@ -5,6 +5,7 @@ The Customer Service is a microservice responsible for managing customer informa
 ## API Endpoints
 
 ### Customers
+- **GET /customers**: Retrieve a list of all customers
 - **POST /customers**: Create a new customer
 - **GET /customers/{id}**: Retrieve customer information by ID
 - **PUT /customers/{id}**: Update customer information by ID

@@ -12,6 +12,7 @@ The Product Service is a microservice responsible for managing product informati
 
 ## API Endpoints
 
+- **GET /products**: Retrieve a list of all products.
 - **POST /products**: Create a new product.
 - **GET /products**: Retrieve a list of all products.
 - **GET /products/{id}**: Retrieve a specific product by ID.
