@@ -7,6 +7,7 @@ This project implements a Sales Management System using a microservices architec
 1. **Product Service**
    - Manages product information such as name, price, description, and stock.
    - CRUD API endpoints:
+     - `GET /products` - Retrieve a list of all products
      - `POST /products` - Create a new product
      - `GET /products/{id}` - Retrieve product details
      - `PUT /products/{id}` - Update product information
@@ -15,6 +16,7 @@ This project implements a Sales Management System using a microservices architec
 2. **Order Service**
    - Manages customer orders including creation, viewing, and cancellation.
    - CRUD API endpoints:
+     - `GET /orders` - Retrieve a list of all orders
      - `POST /orders` - Create a new order
      - `GET /orders/{id}` - Retrieve order details
      - `DELETE /orders/{id}` - Cancel an order
